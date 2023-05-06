@@ -25,6 +25,14 @@ export default function Home() {
 
   return (
     <div>
+      <button
+        onClick={() =>
+          setCurrentPage(<CreatePost setCurrentPage={setCurrentPage} />)
+        }
+      >
+        New Post
+      </button>
+
       <button onClick={() => setCurrentPage(<PostsList1 />)}>
         Posts List 1
       </button>
@@ -34,25 +42,22 @@ export default function Home() {
       >
         Posts List 2
       </button>
+
       <button
         onMouseEnter={onHoverPostOneLink}
         onClick={() => setCurrentPage(<Post id={1} />)}
       >
         First Post
       </button>
-      <button
-        onClick={() =>
-          setCurrentPage(<CreatePost setCurrentPage={setCurrentPage} />)
-        }
-      >
-        New Post
-      </button>
+
       <button onClick={() => setCurrentPage(<PostListPaginated />)}>
         Post List Paginated
       </button>
+
       <button onClick={() => setCurrentPage(<PostListInfinite />)}>
         Post List Infinite
       </button>
+
       {currentPage}
     </div>
   )

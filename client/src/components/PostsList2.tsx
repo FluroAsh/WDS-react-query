@@ -27,8 +27,6 @@ export default function PostsList2() {
     return <h1>{JSON.stringify(postsQuery.error)}</h1>
   }
 
-  console.log(postsQuery.fetchStatus)
-
   return (
     <div>
       <h1>Posts List 2</h1>
